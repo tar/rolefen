@@ -23,15 +23,26 @@
 
 <div id="wrapper">
 	<div id="header">
-        <c:import url="header.jsp"/>
+        <c:import url="/jsp/header.jsp"/>
 	</div>
-	<div id="main">
-		<div id="container">
-			<div id="content">
-				<strong>Content:</strong>
-			</div>
-		</div>
-	</div>
+    <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+    <td><div id="navigation"><jsp:include page="/jsp/rightmenu.jsp"/></div></td>
+    <td>    
+        <div id="main">
+            <div id="container">
+                <div id="content">
+                    <strong>Content:</strong>
+                </div>
+            </div>
+        </div>
+    </td>
+    <td><div id="navigation"><jsp:include page="/jsp/leftmenu.jsp"/></div></td>
+    </tr>
+    </table>
+    <div id="footer">
+        <c:import url="/jsp/footer.jsp"/>
+    </div>
 </div>
 
 

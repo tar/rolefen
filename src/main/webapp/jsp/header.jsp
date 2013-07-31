@@ -3,5 +3,3 @@
 <%@ include file="/jsp/api.jsp" %>
 <a class="mainLogo" href="${homepage_url}"></a>
 <h1>Rolefen</h1>
-<div id="navigation"><jsp:include page="/jsp/navigation.jsp"/></div>
-<div class="headerWhiteRect"></div>
