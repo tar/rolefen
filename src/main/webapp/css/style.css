@@ -50,15 +50,12 @@ span.merror {color:red;}
         .login {float:right; margin-top:23px; margin-right:20px;}       
         .userName {font-size:10px; color:#3d3d3d; margin-right:7px;}
         .loginLink {font-size:10px; color:#891a50;}
-        .headerWhiteRect {background-color:#fff; height:100%; left:0; margin-top:-5px; position:absolute; top:0; width:100%; z-index:-1;}       
         
             /*   Navigation
             ---------------------------------------------- */
             #navigation {margin-bottom:25px; clear:both;}           
             #navigation {margin:0 20px;}        
             #navigation  td {width:1%; line-height:0; font-size:0;}
-            #navigation  td.rubberEnd {width:90%; background-color:#891a50;}
-            #navigation  td div {position:relative;}
             #navigation  td a.navLink { 
                 background-color:#891A50;
                 color: #fff;
@@ -83,7 +80,7 @@ span.merror {color:red;}
             
             #navigation td ul {display:none; left:0; position:absolute; top:26px;}
             #navigation td:hover ul {display:block;}
-            #navigation ul li a {background-color:#891A50; color:#fff; display:block; font:normal 11px arial; padding:6px 4px 6px 10px; text-decoration:none; width:151px;}
+            #navigation ul li a {background-color:#891A50; color:#fff; display:block; font:normal 11px arial; padding:6px 10px 6px 10px; text-decoration:none; width:151px;}
             #navigation ul li a:hover {background-color:#A5386D;}
 
             /*   Top Elements
@@ -104,11 +101,13 @@ span.merror {color:red;}
         /*   Areas
         ---------------------------------------------- */
         .leftArea {background-color:#4080ff;width:1%;}
-        .leftArea td {text-align:center; vertical-align:top;}
-        .leftArea div {text-align:center; vertical-align:top;}
+        .leftArea td {text-align:center !important; vertical-align:top !important;}
+        .leftArea div {text-align:center !important; margin: -260px 0 0 0 }
+        .leftArea ul {text-align:center !important; vertical-align:top !important;}
         .mainArea {background-color:#ffff88;width: 90%;}
         .mainArea td {padding:1px 15px; border-top:1px solid #fff; border-bottom:1px solid #fff; font:normal 11px arial;}
-        .mainArea td {text-align:left; vertical-align:top;}
+        .mainArea td {text-align:left !important; vertical-align:top !important;}
+        .mainArea div {text-align:left !important; margin: -260px 0 0 0 }
         
         #container {padding:0 20px;}
         #content {width:100%;}
