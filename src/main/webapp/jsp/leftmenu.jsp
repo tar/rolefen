@@ -5,11 +5,13 @@
 
 <div class="rightMenu">
     <ul>
-        <li><a class="navLink homeMenuBut" href="${import_api_url}">Главная</a></li>
-        <li><a class="navLink actMenuBut" href="${compoundset_api_url}">Мероприятия</a></li>
-        <li><a class="navLink phMenuBut" href="${upload_api_url}">Фото</a></li>
-        <li><a class="navLink movMenuBut" href="${upload_api_url}">Видео</a></li>
-        <li><a class="navLink conMenuBut" href="${upload_api_url}">Контакты</a></li>
-        <li><a class="navLink joinMenuBut" href="${upload_api_url}">Вступить</a></li>
+        <li><a class="navLink homeMenuBut" href="${homepage_url}">Главная</a></li>
+        <li><a class="navLink actMenuBut" href="${activity_url}">Мероприятия</a></li>
+        <li><a class="navLink aboutMenuBut" href="${about_url}">О нас</a></li>
+        <li><a class="navLink docMenuBut" href="${document_url}">Документы</a></li>
+        <li><a class="navLink phMenuBut" href="${photo_url}">Фото</a></li>
+        <li><a class="navLink movMenuBut" href="${movie_url}">Видео</a></li>
+        <li><a class="navLink conMenuBut" href="${contact_url}">Контакты</a></li>
+        <li><a class="navLink joinMenuBut" href="${user_url}">Вступить</a></li>
     </ul>
 </div>

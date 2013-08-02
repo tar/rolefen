@@ -38,14 +38,14 @@ span.merror {color:red;}
 
     /*   Wrapper
     ---------------------------------------------- */
-    #wrapper {width:100%; min-width:1000px; min-height:100%; height:auto !important; height:100%;}
+    #wrapper {width:100%; min-width:1000px; min-height:100%; height:100%;}
     .middleTable {width:830px;}
     
         /*   Header
         ---------------------------------------------- */
         #header {padding:15px 20px 0 20px;}
 /*        #header {background:url(/img/fade.png) left bottom repeat-x; padding:15px 0 0 0; position:fixed; z-index:100; top:0; width: 100%;} /*fixed header styles*/
-        #header {background-color:#89aaff; padding:15px 0 0 0; position:fixed; z-index:100; top:0; width: 100%;} /*fixed header styles*/
+        #header {background-color:#70aaff; padding:15px 0 0 0; position:fixed; z-index:100; top:0; width: 100%;} /*fixed header styles*/
         .mainLogo {background:transparent url('/img/logo1,png') 0 0 no-repeat; display:inline-block; float:left; margin-bottom:14px; margin-left:20px; width:111px; height:40px;}      
         .login {float:right; margin-top:23px; margin-right:20px;}       
         .userName {font-size:10px; color:#3d3d3d; margin-right:7px;}
@@ -53,8 +53,7 @@ span.merror {color:red;}
         
             /*   Navigation
             ---------------------------------------------- */
-            #navigation {margin-bottom:25px; clear:both;}           
-            #navigation {margin:0 20px;}        
+            #navigation {margin-bottom:25px; clear:both; position:fixed; z-index:100; top:90px; width: 100%;}           
             #navigation  td {width:1%; line-height:0; font-size:0;}
             #navigation  td a.navLink { 
                 background-color:#891A50;
@@ -76,12 +75,14 @@ span.merror {color:red;}
             .menuActivePhoto #navigation  td a.phMenuBut, 
             .menuActiveMovies #navigation  td a.movMenuBut ,
             .menuActiveContacts #navigation  td a.conMenuBut, 
+            .menuActiveContacts #navigation  td a.aboutMenuBut, 
+            .menuActiveContacts #navigation  td a.docMenuBut, 
             .menuActiveJoin #navigation  td a.joinMenuBut {background:#891A50 url('/img/menuHoverBG.gif') 0 0 repeat-x;}           
             
-            #navigation td ul {display:none; left:0; position:absolute; top:26px;}
+            #navigation td ul {display:none; left:0; position:fixed; top:26px;}
             #navigation td:hover ul {display:block;}
-            #navigation ul li a {background-color:#891A50; color:#fff; display:block; font:normal 11px arial; padding:6px 10px 6px 10px; text-decoration:none; width:151px;}
-            #navigation ul li a:hover {background-color:#A5386D;}
+            #navigation ul li a {color:#fff; display:block; font:normal 11px arial; padding:6px 10px 6px 6px; text-decoration:none; width:151px;}
+            #navigation ul li a:hover {background-color:#101040;}
 
             /*   Top Elements
             ---------------------------------------------- */
@@ -94,21 +95,17 @@ span.merror {color:red;}
             
         /*   Main Content
         ---------------------------------------------- */
-        #main {padding-top:68px;} /*fixed header styles*/
-        #main table {min-height:600px;}
-        
+        #main {padding-top:68px; height:100%;} /*fixed header styles*/
         
         /*   Areas
         ---------------------------------------------- */
-        .leftArea {background-color:#4080ff;width:1%;}
+        .leftArea {background-color:#103066; min-width:167px;}
         .leftArea td {text-align:center !important; vertical-align:top !important;}
-        .leftArea div {text-align:center !important; margin: -260px 0 0 0 }
         .leftArea ul {text-align:center !important; vertical-align:top !important;}
-        .mainArea {background-color:#ffff88;width: 90%;}
+        .mainArea {background-color:#ffffbb;width: 90%;}
         .mainArea td {padding:1px 15px; border-top:1px solid #fff; border-bottom:1px solid #fff; font:normal 11px arial;}
         .mainArea td {text-align:left !important; vertical-align:top !important;}
-        .mainArea div {text-align:left !important; margin: -260px 0 0 0 }
-        
+        .mainArea div {text-align:left !important; margin: -300px 0 0 0 }
         #container {padding:0 20px;}
         #content {width:100%;}
         #content.middleTable {width:830px;}

@@ -28,17 +28,16 @@
             <c:import url="/jsp/header.jsp" />
         </div>
         <div id="main">
-            <table width="100%" cellpadding="0" cellspacing="0">
+            <table class="pageFormat" style="height:100%" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td class="leftArea"><div id="navigation"><jsp:include page="/jsp/rightmenu.jsp" /></div>
-                    </td>
+                    <td class="leftArea"><div id="navigation"><jsp:include page="/jsp/leftmenu.jsp" /></div></td>
                     <td class="mainArea">
                         <div id="container">
                             <div id="content">
                                 <strong>Content:</strong>
                             </div>
                         </div></td>
-                    <td class="leftArea"><div id="navigation"><jsp:include page="/jsp/leftmenu.jsp" /></div>
+                    <td class="leftArea"><div id="navigation"><jsp:include page="/jsp/rightmenu.jsp" /></div>
                     </td>
                 </tr>
             </table>

@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title></title>
+<title>Вступить</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link rel="stylesheet" href="<c:url value="/css/style.css"/>" type="text/css" media="screen, projection" />
@@ -24,14 +24,14 @@
         <div id="header">
             <c:import url="/jsp/header.jsp" />
         </div>
-        <div id="main">
-              <table class="pageFormat" style="height:100%" width="100%" cellpadding="0" cellspacing="0">
+       <div id="main">
+            <table class="pageFormat" style="height:100%" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                     <td class="leftArea"><div id="navigation"><jsp:include page="/jsp/leftmenu.jsp" /></div></td>
                     <td class="mainArea">
                         <div id="container">
                             <div id="content">
-                                <strong>Content:</strong>
+                                <strong>Вступить</strong>
                             </div>
                         </div>
                     </td>
