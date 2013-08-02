@@ -49,4 +49,23 @@
             </map>
         </property>
     </bean>
+    <bean name="teamDao" class="com.mycelium.rolefen.model.dao.JdbcCrudDao" parent="jdbcDao">
+        <property name="tableName" value="team"/>
+        <property name="beanClass" value="com.mycelium.rolefen.model.entities.TeamEntity"/>
+        <property name="fieldMapping">
+            <map>
+                <entry key="id" value="id"/>
+                <entry key="master_id" value="masterId"/>                
+                <entry key="caption" value="caption"/>
+                <entry key="description" value="description"/>                
+                <entry key="email" value="email"/>                
+                <entry key="phone" value="phone"/>                
+                <entry key="address" value="address"/>                
+                <entry key="reg_date" value="registrationDate"/>                
+                <entry key="logo_path" value="logoPath"/>                
+                <entry key="active" value="active"/>                
+                <entry key="description" value="description"/>                
+            </map>
+        </property>
+    </bean>
 </beans>

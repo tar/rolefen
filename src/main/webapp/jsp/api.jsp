@@ -11,6 +11,7 @@
     <c:url value="/photo" var="photo_url" scope="request"/>
     <c:url value="/movie" var="movie_url" scope="request"/>
     <c:url value="/user" var="user_url" scope="request"/>
+    <c:url value="/team" var="team_url" scope="request"/>
 
     <script type="text/javascript">
         window.homepageApiUrl = '${homepage_url}';
@@ -21,6 +22,7 @@
         window.photoApiUrl = '${photo_url}';
         window.movieApiUrl = '${movie_url}';
         window.userApiUrl = '${user_url}';
+        window.teamApiUrl = '${team_url}';
     </script>
     <c:set var="api_defined" value="true" scope="request"/>
 </c:if>

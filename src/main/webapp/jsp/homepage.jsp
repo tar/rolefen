@@ -6,11 +6,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title></title>
+<title>Сайт КТФ</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link rel="stylesheet" href="<c:url value="/css/style.css"/>" type="text/css" media="screen, projection" />
+<script type="text/javascript" src="<c:url value="/js/jquery.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/js/jquery-ui.js"/>"></script>
 <link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/style.css"/>" />
+<link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/jquery-ui.css"/>" />
 <%--
     <!--[if IE]>
     <link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/ie.css"/>"/>
