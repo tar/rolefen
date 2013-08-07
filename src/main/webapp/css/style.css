@@ -34,6 +34,14 @@ span.description, span.error {font:italic 10px arial; position:absolute; left:0;
 span.error {color:red;}
 span.mdescription, span.merror {font:italic 10px arial; left:0; top:20px; color:#b1b1b1; }
 span.merror {color:red;}
+@font-face {
+  font-family: "Cuprum";
+  src: url("/img/cuprum.eot");
+}
+@font-face {
+  font-family: "Cuprum";
+  src: url("/img/cuprum.ttf");
+}
 
 
     /*   Wrapper
@@ -53,7 +61,7 @@ span.merror {color:red;}
         
             /*   Navigation
             ---------------------------------------------- */
-            #navigation {margin-bottom:25px; clear:both; position:fixed; z-index:100; top:90px; width: 100%;}           
+            #navigation {margin-bottom:25px; clear:both; position:fixed; z-index:100; top:90px;}           
             #navigation  td {width:1%; line-height:0; font-size:0;}
             #navigation  td a.navLink { 
                 background-color:#891A50;
@@ -105,8 +113,7 @@ span.merror {color:red;}
         .mainArea {background-color:#ffffbb;width: 90%;}
         .mainArea td {padding:1px 15px; border-top:1px solid #fff; border-bottom:1px solid #fff; font:normal 11px arial;}
         .mainArea td {text-align:left !important; vertical-align:top !important;}
-        .mainArea div {text-align:left !important; margin: -300px 0 0 0 }
-        #container {padding:0 20px;}
+        #container {padding:10px 20px;}
         #content {width:100%;}
         #content.middleTable {width:830px;}
         .bigTableContainer {overflow:auto; height:100%;}
@@ -231,7 +238,6 @@ span.merror {color:red;}
                 .graph.ui-tabs .ui-tabs-nav li.ui-state-hover {padding:0 !important;}
                 .graph.ui-tabs .ui-tabs-nav li.ui-state-active {background-color:#f3f6e8;}
                 .graph.ui-tabs .ui-tabs-nav li a {padding:.3em 1em;}
-                
             /*   Popup Table
             ---------------------------------------------- */
             .popupTable {width:100%; margin-top:10px;}

@@ -1,0 +1,15 @@
+/*   Main Content
+---------------------------------------------- */	
+	
+	
+	/*   Buttons
+	---------------------------------------------- */	
+	.btnGreen:active {border-top-width:1px; border-left-width:1px;} 		
+	.btnGreen:active span {padding-bottom:5px; padding-right:10px;}
+
+
+	/*   Popup Table
+	---------------------------------------------- */
+	.popupTableAnn textarea {width:403px;}
+	.popupTable .lastTd td {padding-right:15px;}
+

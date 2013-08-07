@@ -42,10 +42,20 @@
         <property name="beanClass" value="com.mycelium.rolefen.model.entities.UserEntity"/>
         <property name="fieldMapping">
             <map>
+                <entry key="role_id" value="roleId"/>                
+                <entry key="team_id" value="teamId"/>              
                 <entry key="login" value="login"/>
                 <entry key="first_name" value="firstName"/>
                 <entry key="last_name" value="lastName"/>                
-                <entry key="role_id" value="roleId"/>                
+                <entry key="patronymic" value="patronymic"/>                
+                <entry key="password" value="password"/>                
+                <entry key="phone" value="phone"/>                
+                <entry key="email" value="email"/>                
+                <entry key="address" value="address"/>                
+                <entry key="rating" value="rating"/>                
+                <entry key="active" value="active"/>                
+                <entry key="reg_date" value="registrationDate"/>                
+                <entry key="birthday" value="birthday"/>                
             </map>
         </property>
     </bean>

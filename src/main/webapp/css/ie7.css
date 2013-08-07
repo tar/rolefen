@@ -1,0 +1,57 @@
+/*   Main Table
+---------------------------------------------- */
+button { noFocusLine: expression(this.hideFocus=true);}
+button:active {margin-right:100px; background-color:red;}
+button[type="reset"],
+button[type="button"],
+button[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer; // Cursors on all buttons applied consistently
+  -webkit-appearance: button; // Style clickable inputs in iOS
+  filter: e(%("chroma(color=#000000)"));
+  overflow: visible;
+}
+
+	/*   Main Content
+	---------------------------------------------- */
+	#main {padding-top:147px;}
+	button {padding:0 4px;}
+	.btnGreen {padding:0;}
+	.btnGreen:hover span {border-color:#72764f; background-position:0 -20px; }
+	.bigTableContainer {min-width:100%;}
+	
+		/*   Columns Width
+		---------------------------------------------- */
+		.operationCol {height:22px;}
+	
+		/*   Edit Dialog
+		---------------------------------------------- */
+		.editDialog button {margin-right:4px;}
+		.locker {margin-top:-17px;}
+
+		/*   Results Page
+		---------------------------------------------- */	
+		.results .mainTable th {padding:2px 15px;}
+	
+	/*   JQuery Dialog Styles Rewrite
+	---------------------------------------------- */
+	.ui-dialog .ui-dialog-titlebar-close {right:11px;}
+    .ui-dialog-buttonset button.ui-state-default,
+    .ui-dialog-buttonset button.ui-state-hover {background-color:#9b9e7b; border:0 none !important; background-image:none !important; padding:1px 0 0 0!important; font-size:0 !important;}
+    .ui-dialog-buttonset .ui-button-text {border: 0 none !important; background:transparent url('../img/btnGreenBG.png') 0 0 repeat-x; margin:0 1px !important; }
+		
+		/*   Popup Table
+		---------------------------------------------- */
+		.popupTableAnn textarea{width:402px;}
+		.popupTable .lastTd td {padding-right:18px;}	
+		
+		/*   Edit Calculations
+		---------------------------------------------- */
+		.calculationTab .editDialogWrap .selectVariableRow td.withButton  button{display:block;}
+		.applyButtonsTop {margin-bottom:6px;}
+		.applyButtonsTop button {margin-left:4px;}
+		.resultVariablesTable input {height: 13px;}
+		.dialogWithCheckbox label {padding-left:8px;}
+		.dialogWithCheckbox input {top:-2px;}
