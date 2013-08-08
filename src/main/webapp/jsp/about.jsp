@@ -30,7 +30,7 @@
             <table class="pageFormat" style="height:100%" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                     <td class="leftArea"><div id="navigation"><jsp:include page="/jsp/leftmenu.jsp" /></div></td>
-                    <td class="mainArea">
+                    <td class="mainArea" valign="top">
                         <div id="container">
                             <div id="content">
                                 <strong>О нас</strong>

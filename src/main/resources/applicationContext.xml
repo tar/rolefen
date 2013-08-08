@@ -37,7 +37,7 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <bean name="userDao" class="com.mycelium.rolefen.model.dao.JdbcCrudDao" parent="jdbcDao">
+    <bean name="userDao" class="com.mycelium.rolefen.model.dao.UserDao" parent="jdbcDao">
         <property name="tableName" value="person"/>
         <property name="beanClass" value="com.mycelium.rolefen.model.entities.UserEntity"/>
         <property name="fieldMapping">
@@ -57,6 +57,11 @@
                 <entry key="reg_date" value="registrationDate"/>                
                 <entry key="birthday" value="birthday"/>                
             </map>
+        </property>
+        <property name="teamUsersQuery">
+            <value>
+                select * from person where team_id=?
+            </value>
         </property>
     </bean>
     <bean name="teamDao" class="com.mycelium.rolefen.model.dao.JdbcCrudDao" parent="jdbcDao">

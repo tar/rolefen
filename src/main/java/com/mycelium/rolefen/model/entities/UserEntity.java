@@ -7,6 +7,7 @@ public class UserEntity implements Entity {
     private long _id;
     private long _roleId;
     private long _teamId;
+    private boolean _active;
     private String _login;
     private String _firstName;
     private String _lastName;
@@ -15,7 +16,6 @@ public class UserEntity implements Entity {
     private String _phone;
     private String _email;    
     private String _rating;
-    private String _active;
     private String _address;
     private Date _registrationDate;
     private Date _birthday;
@@ -40,6 +40,14 @@ public class UserEntity implements Entity {
 
     public String getLogin() {
         return _login;
+    }
+    
+    public boolean isActive() {
+        return _active;
+    }
+
+    public void setActive(boolean enabled) {
+        _active = enabled;
     }
 
     public void setLogin(String login) {
@@ -108,14 +116,6 @@ public class UserEntity implements Entity {
 
     public void setRating(String rating) {
         _rating = rating;
-    }
-
-    public String getActive() {
-        return _active;
-    }
-
-    public void setActive(String active) {
-        _active = active;
     }
 
     public Date getRegistrationDate() {

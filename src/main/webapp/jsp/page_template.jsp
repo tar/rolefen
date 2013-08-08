@@ -9,6 +9,8 @@
 <title></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<script type="text/javascript" src="<c:url value="/js/jquery.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/js/jquery-ui.js"/>"></script>
 <link rel="stylesheet" href="<c:url value="/css/style.css"/>" type="text/css" media="screen, projection" />
 <link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/style.css"/>" />
 <!--[if IE]>
@@ -17,6 +19,7 @@
 <!--[if IE 7]>
 	<link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/ie7.css"/>"/>
 	<![endif]-->
+<%@ include file="/jsp/api.jsp"%>
 </head>
 
 <body>
@@ -28,7 +31,7 @@
               <table class="pageFormat" style="height:100%" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                     <td class="leftArea"><div id="navigation"><jsp:include page="/jsp/leftmenu.jsp" /></div></td>
-                    <td class="mainArea">
+                    <td class="mainArea" valign="top">
                         <div id="container">
                             <div id="content">
                                 <strong>Content:</strong>

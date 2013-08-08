@@ -24,7 +24,7 @@
             }
         });
         for (var i = 0; i < teams.length; i++) {
-            $('#rightMenuList').append('<li><a href="/team/'+teams[i].id+'">'+ teams[i].caption+'</a></li>');            
+            $('#rightMenuList').append('<li><a href="'+window.teamApiUrl+'/'+teams[i].id+'">'+ teams[i].caption+'</a></li>');            
         }
     });
 </script>

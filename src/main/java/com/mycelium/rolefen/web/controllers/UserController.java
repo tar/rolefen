@@ -30,8 +30,9 @@ public class UserController {
     }
     
     @RequestMapping(value = "/user/member",method=RequestMethod.POST)
-    void addMember(@ModelAttribute("member") UserEntity user){
+    String addMember(@ModelAttribute("member") UserEntity user){
         user.setRoleId(3);
         _userDao.insert(user);
+        return "redirect:/team/"+user.getTeamId();
     }
 }

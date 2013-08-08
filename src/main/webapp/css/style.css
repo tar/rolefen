@@ -174,6 +174,7 @@ span.merror {color:red;}
             .editDialogHeader {font:normal 11px arial; text-align:right; padding-right:8px; vertical-align:top; padding-top:3px;}           
             .editDialog  select, .editDialog  textarea, .editDialog  input[type="text"]{margin:0px; border:1px solid #b0b0b0; padding:0px 4px; font:normal 11px arial; width:210px; color:#3d3d3d;}
             .editDialog  input[type="text"]{height:18px; line-height:18px;}
+            .editDialog  input[type="password"]{margin:0px; border:1px solid #b0b0b0; padding:0px 4px; font:normal 11px arial; width:210px; color:#3d3d3d; height:18px; line-height:18px;}
             .editDialog  input[type="file"]{font-size: 10px; padding: 1px 0px;}
             .editDialog  select {height:20px; padding:0px; width:220px;}
             .editDialog  select.multipleSelect {height:120px;}

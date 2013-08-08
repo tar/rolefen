@@ -12,6 +12,7 @@
 <meta name="description" content="" />
 <script type="text/javascript" src="<c:url value="/js/jquery.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/js/jquery-ui.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/js/jquery.ui.datepicker-ru.js"/>"></script>
 <link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/style.css"/>" />
 <link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/jquery-ui.css"/>" />
 <!--[if IE]>
@@ -36,6 +37,11 @@
                     <td class="mainArea" valign="top">
                         <div id="container">
                             <div id="content">
+                            <div class="topElements middleTable">
+                                <h2>Регистрация</h2>
+                                <div class="rightControls">
+                                </div>
+                            </div>
                                 <div id="tabs" class="graph">
                                     <ul>
                                         <li><a href="#tabs-1">Для Ратника</a>
@@ -46,111 +52,7 @@
                                         </li>
                                     </ul>
                                     <div id="tabs-1">
-                                        <div class="editDialogWrap">
-                                        <form:form id="memberRegForm" action="${user_url}/member" modelAttribute="member" method="POST" cssClass="editDialog">
-                                            <table id="memberRegTable">
-                                                <tr>
-                                                    <td class="editDialogHeader">Имя</td>
-                                                    <td>
-                                                        <div class="posWrapper">
-                                                            <form:input id="firstNameInp" path="firstName"/>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="editDialogHeader">Фамилия</td>
-                                                    <td>
-                                                        <div class="posWrapper">
-                                                            <form:input id="lastNameInp" path="lastName"/>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="editDialogHeader">Отчество</td>
-                                                    <td>
-                                                        <div class="posWrapper">
-                                                            <form:input id="patronymicInp" path="patronymic"/>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="editDialogHeader">Имя КТФ(Login)</td>
-                                                    <td>
-                                                        <div class="posWrapper">
-                                                            <form:input id="loginInp" path="login"/>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="editDialogHeader">Пароль</td>
-                                                    <td>
-                                                        <div class="posWrapper">
-                                                            <form:input type="password" id="passwordInp" path="password"/>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="editDialogHeader">Телефон</td>
-                                                    <td>
-                                                        <div class="posWrapper">
-                                                            <form:input id="phoneInp" path="phone"/>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="editDialogHeader">Адрес эл. почты</td>
-                                                    <td>
-                                                        <div class="posWrapper">
-                                                            <form:input id="emailInp" path="email"/>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="editDialogHeader">Адрес</td>
-                                                    <td>
-                                                        <div class="posWrapper">
-                                                            <form:input id="addressInp" path="address"/>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="editDialogHeader">Дата рождения</td>
-                                                    <td>
-                                                        <div class="posWrapper">
-                                                            <form:input id="birthdayInp" path="birthday"/>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="editDialogHeader">Команда</td>
-                                                    <td>
-                                                        <div class="posWrapper">
-                                                            <form:select id="teamSelect" path="teamId">
-                                                                <form:options items="${teams}" itemLabel="caption" itemValue="id"/>
-                                                            </form:select>
-                                                        </div>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="3" class="noPad">
-                                                    <button type="button" id="btnSave" class="btnGreen" title="Принять">
-                                                        <span class="btnGreenText">Принять</span>
-                                                    </button>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            </form:form>
-                                            </div>
+                                        <c:import url="/jsp/registration/memberRegistrationForm.jsp" />
                                     </div>
                                     <div id="tabs-2">
                                     </div>
@@ -173,7 +75,16 @@
     <script type="text/javascript">
         $(function() {
             $("#tabs").tabs();
-            $( "#birthdayInp" ).datepicker();
+            $( "#birthdayInp" ).datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '1950:+0',
+                monthRange: '1:+0',
+                showOn: "button",
+                buttonImage: "img/calendar.gif",
+                buttonImageOnly: true
+              });
+            $( "#datepicker" ).datepicker( "option", "showAnim", "slideDown");
         });
         $('#btnSave').click(function () {
             $('#memberRegForm').submit();
