@@ -6,7 +6,7 @@ public class UserEntity implements Entity {
 
     private long _id;
     private long _roleId;
-    private long _teamId;
+    private Long _teamId;
     private boolean _active;
     private String _login;
     private String _firstName;
@@ -70,11 +70,11 @@ public class UserEntity implements Entity {
         _lastName = lastName;
     }
 
-    public long getTeamId() {
+    public Long getTeamId() {
         return _teamId;
     }
 
-    public void setTeamId(long teamId) {
+    public void setTeamId(Long teamId) {
         _teamId = teamId;
     }
 
