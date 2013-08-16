@@ -6,15 +6,19 @@ public class UserEntity implements Entity {
 
     private long _id;
     private long _roleId;
+    private long _rankId;
     private Long _teamId;
     private boolean _active;
+    private boolean _master;
+    private boolean _adviser;
+    private boolean _chief;
     private String _login;
     private String _firstName;
     private String _lastName;
     private String _password;
     private String _patronymic;
     private String _phone;
-    private String _email;    
+    private String _email;
     private String _rating;
     private String _address;
     private Date _registrationDate;
@@ -38,16 +42,48 @@ public class UserEntity implements Entity {
         _roleId = roleId;
     }
 
+    public long getRankId() {
+        return _rankId;
+    }
+
+    public void setRankId(long rankId) {
+        _rankId = rankId;
+    }
+
     public String getLogin() {
         return _login;
     }
-    
+
     public boolean isActive() {
         return _active;
     }
 
     public void setActive(boolean enabled) {
         _active = enabled;
+    }
+
+    public boolean isMaster() {
+        return _master;
+    }
+
+    public void setMaster(boolean master) {
+        _master = master;
+    }
+
+    public boolean isAdviser() {
+        return _adviser;
+    }
+
+    public void setAdviser(boolean adviser) {
+        _adviser = adviser;
+    }
+
+    public boolean isChief() {
+        return _chief;
+    }
+
+    public void setChief(boolean chief) {
+        _chief = chief;
     }
 
     public void setLogin(String login) {
@@ -101,13 +137,13 @@ public class UserEntity implements Entity {
     public void setPhone(String phone) {
         _phone = phone;
     }
-    
+
     public String getEmail() {
         return _email;
     }
 
     public void setEmail(String email) {
-        this._email = email;
+        _email = email;
     }
 
     public String getRating() {
@@ -140,6 +176,10 @@ public class UserEntity implements Entity {
 
     public void setBirthday(Date birthday) {
         _birthday = birthday;
+    }
+
+    public Role getRole() {
+        return Role.valueOf(_roleId);
     }
 
 }
