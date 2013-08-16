@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<security:global-method-security
+		secured-annotations="enabled" />
+
+	<security:http auto-config="false" access-denied-page="/">
+		<!-- <security:intercept-url pattern="/upload/**" access="ROLE_ADMINISTRATOR" 
+			/> <security:intercept-url pattern="/qiwi/**" access="IS_AUTHENTICATED_ANONYMOUSLY" 
+			/> <security:intercept-url pattern="/admin/**" access="ROLE_ADMINISTRATOR" 
+			/> <security:intercept-url pattern="/personalaccount.html" access="ROLE_LIBRARY, 
+			ROLE_PUBLISHER, ROLE_USER, ROLE_READER, ROLE_SOCIAL_NETWORK_USER, ROLE_ADMINISTRATOR" 
+			/> -->
+
+		<security:form-login login-processing-url="/login"
+			authentication-success-handler-ref="authenticationSuccessHandler"
+			authentication-failure-handler-ref="authenticationFailureHandler" />
+
+		<security:logout logout-url="/logout"
+			logout-success-url="/" />
+
+		<security:intercept-url pattern="/**"
+			access="IS_AUTHENTICATED_ANONYMOUSLY" />
+
+	</security:http>
+
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider
+			user-service-ref="userDao">
+			<security:password-encoder hash="md5" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+	<bean id="daoAuthenticationProvider"
+		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDao" />
+	</bean>
+
+	<bean
+		id="org.springframework.security.authentication.authenticationManager"
+		class="org.springframework.security.authentication.ProviderManager">
+		<property name="providers">
+			<list>
+				<ref bean="daoAuthenticationProvider" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="authenticationFailureHandler"
+		class="com.mycelium.rolefen.web.controllers.security.SecurityAuthenticationFailureHandler">
+	</bean>
+
+
+	<bean id="authenticationSuccessHandler"
+		class="com.mycelium.rolefen.web.controllers.security.SecurityAuthenticationSuccessHandler">
+	</bean>
+
+</beans>

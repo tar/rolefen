@@ -6,7 +6,7 @@ public class UserEntity implements Entity {
 
     private long _id;
     private long _roleId;
-    private long _rankId;
+    private Long _rankId;
     private Long _teamId;
     private boolean _active;
     private boolean _master;
@@ -42,11 +42,11 @@ public class UserEntity implements Entity {
         _roleId = roleId;
     }
 
-    public long getRankId() {
+    public Long getRankId() {
         return _rankId;
     }
 
-    public void setRankId(long rankId) {
+    public void setRankId(Long rankId) {
         _rankId = rankId;
     }
 

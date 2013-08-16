@@ -4,3 +4,7 @@
 <%@ include file="/jsp/api.jsp" %>
 <a class="mainLogo" href="${homepage_url}"></a>
 <h1>КТФ</h1>
+<button onclick="openLoginDlg()">Войти</button> 
+
+<c:import url="/jsp/login.jsp" />
+

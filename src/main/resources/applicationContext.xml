@@ -68,6 +68,11 @@
 				select * from person where team_id=?
             </value>
 		</property>
+		<property name="loginUserQuery">
+			<value>
+				select * from person where login=?
+            </value>
+		</property>
 	</bean>
 	<bean name="teamDao" class="com.mycelium.rolefen.model.dao.JdbcCrudDao"
 		parent="jdbcDao">

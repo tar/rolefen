@@ -11,6 +11,7 @@
 <meta name="description" content="" />
 <script type="text/javascript" src="<c:url value="/js/jquery.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/js/jquery-ui.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/js/common.js"/>"></script>
 <link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/style.css"/>" />
 <link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/jquery-ui.css"/>" />
 <%--

@@ -1,3 +1,12 @@
+function openLoginDlg(){
+    $('#loginDialog').dialog({modal: true, buttons: {
+        'Войти': function() {
+            $('#loginForm').submit();
+            $(this).dialog('close');
+        }
+    }});
+}
+
 function escapeSelector(str) {
     if (str)
         return str.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
